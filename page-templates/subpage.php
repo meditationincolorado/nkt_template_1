@@ -27,6 +27,7 @@ get_header(); ?>
 				<p><?php echo $post->subpage_blurb; ?></p>
 			</hgroup>
 	</div>
+	<!--<?php include(get_template_directory() . '/mobile-nav.php'); ?>-->
 
 	<!-- Subnav -->
 	<?php include(get_template_directory() . '/subpage_subnav.php'); ?>

@@ -4521,7 +4521,7 @@ span.highlight {
 }
 #banner-cta a:hover { color: #a6baab !important; }
 #banner-cta span.highlight:hover {
-	color: #a6baab;
+	color: #ffffff;
 }
 #banner-cta a#close {
 	position: absolute; 
@@ -4728,6 +4728,13 @@ span.highlight {
 	color: #ffffff;
 	font-weight: 500;
 	font-size: 1.4em;
+	margin: 0 5px !important;
+}
+#hero-section #mobile-nav a:first-child {
+	margin-left: 0 !important;
+}
+#hero-section #mobile-nav a:last-child {
+	margin-right: 0 !important;
 }
 #hero-section .scroll-cta {
 	position: absolute;
@@ -4785,8 +4792,9 @@ span.highlight {
 	margin-right: 0;
 }
 #hero-section #mobile-nav a {
-	font-weight: 100;
-	opacity: .6;
+	font-weight: 300;
+	opacity: 1;
+	color: #ffffff;
 }
 .feature-section { position: relative; }
 .tint, #footer-contact .tint {
@@ -4959,6 +4967,7 @@ span#for-beginngers { display: inline-block; color: #333; font-size: .8em; margi
 	margin: 0 auto;
 	text-transform: lowercase;
 	letter-spacing: -.1em;
+	font-size: 2em;
 }
 #footer-contact p {
 	font-weight: 100;
@@ -5140,17 +5149,18 @@ span.mobile-hidden {
 
 /* subpages */
 #subpage_hero {
-	height: calc(70vh);
+	height: calc(40vh);
 }
 #subpage_hero .tint {
 	background-color: rgba(0,0,0,.45);
 }	
 #subpage_hero hgroup { 
 	color: white;
-	max-width: 300px; 
+	max-width: initial;
+	text-align: center; 
 }
 #subpage_hero hgroup h1 { 
-	font-size: 3.5em;
+	font-size: 3em;
 	text-transform: lowercase;
 	letter-spacing: -.1em;
 	margin: 0 0 20px;
@@ -5364,6 +5374,12 @@ span.mobile-hidden {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+	#subpage_hero {
+		height: calc(50vh);
+	}
+	#subpage_hero hgroup h1 { 
+		font-size: 5.5em;
+	}
 	.slick-dots { display: block !important; opacity: .8; }
 	.feature-section article { padding: 120px 20px 140px; }/*{ padding: 80px 20px; } */
 	.feature-section article h2 { 
@@ -5397,13 +5413,15 @@ span.mobile-hidden {
 		border-right: 1px solid #eee;
 	}
 	footer { padding: 120px 20px; }
-	#subpage_hero hgroup { 
-		max-width: 600px;
-	}
+	
 }
 
 @media (min-width: 1024px) { /* sm */
 	.slick-slider .slick-track .slick-slide.lefty { background-position-x: center; }
+
+	#subpage_hero {
+		height: calc(70vh);
+	}
 }
 
 .no_display, .no_media { display: none; }

@@ -1,14 +1,24 @@
 <nav id="mobile-nav">
 
+
 	<?php
-		$args1 = array(
+		/*$args1 = array(
             'post_type' => 'page',
             'meta_key' => '_wp_page_template',
             'meta_value' => 'page-templates/subpage.php',
 			'orderby' => 'sort',
 			'order'   => 'ASC',
    			'posts_per_page' => 3
-          );
+          );*/
+    $args1 = array( 
+      'post_type' => 'page',
+      'posts_per_page' => 4,
+      'meta_key' => 'nav_order',
+      'orderby' => 'meta_value_num',
+      'order'   => 'ASC'
+    );
+
+
 		
         $subNavSubpages = new WP_Query($args1);
 
