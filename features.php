@@ -1,6 +1,6 @@
 <section class="feature-section">
 	
-	<article class="row">
+	<article id="upcoming" class="row">
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 			<?php include('google_cal_upcoming.php'); ?>
 		</div>

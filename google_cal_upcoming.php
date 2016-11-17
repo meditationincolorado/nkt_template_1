@@ -9,12 +9,20 @@
  	$service = new Google_Service_Calendar($client); 
 
  	$calendarId = 'media@meditationincolorado.org';
+ 	$curTimestamp = date('c');
+ 	$tomorrow = date('Y-m-d', strtotime("+1 days")) . 'T00:00:00+00:00';
+ 	$timeMinString = substr($curTimestamp, 0, strpos($curTimestamp, 'T') + 1). '00:00:00+00:00';
+ 	//echo '<script>console.log("' . $timeMinString . '");</script>';
+ 	//echo '<script>console.log("' . $tomorrow . '");</script>';
+	
 	$optParams = array(
-	  'maxResults' => 3,
+	  //'maxResults' => 5,
 	  'orderBy' => 'startTime',
 	  'singleEvents' => TRUE,
-	  'timeMin' => date('c')
+	  'timeMin' => $timeMinString,
+	  'timeMax' => $tomorrow
 	);
+
 	$results = $service->events->listEvents($calendarId, $optParams);
 
 	echo '<ul id="todays-classes">';
@@ -22,7 +30,7 @@
 		  print "No upcoming events found.<br/>";
 		} else {
 		  //print "Upcoming events:<br/>";
-		echo "<li class='cta_wrapper'><h6>today</h6> or <a href='./classes#calendar' class=''>see full calendar</a></li>";
+		echo "<li id='heading'><h6>today</h6> <span>or</span> <a href='./classes#calendar' class=''>see full calendar</a></li>";
 
 		  foreach ($results->getItems() as $event) {
 		    $id = $event->id;
@@ -32,7 +40,7 @@
 		    //echo $id . '<br/>';
 
 		    $event = $service->events->get('media@meditationincolorado.org', $id);
-		    $cleanClassName = substr($event->summary, 0, strpos($event->summary, "-") - 1);
+		    $cleanClassName = substr($event->summary, 0);//, strpos($event->summary, "-"));
 			$date = new DateTime($event->start["dateTime"]);
 			$dateString = $date->format('l, F jS');
 			$time = ($date->format('i') != '00') ? $date->format('g:i') : $date->format('g');
@@ -41,9 +49,7 @@
 			
 			//echo $result;
 
-			echo '<li class="cta_wrapper"><a href="" class="cta">' . $cleanClassName . '</a> <span>' . $time . ' to ' . $endTime . ' | ' . $event->description . ' - ' . $event->location . '</span></li>';
-			//echo '<strong>' . $event->getSummary() . '</strong><br/>' . $dateString . ' at '. $event->location . '<br/>' . $event->description . '<br/><br/>';
-		    //echo 'After<br/>';
+			echo '<li class="cta_wrapper"><a href="./classes" class="cta">' . $cleanClassName . '</a> <span class="info"><b>' . $time . ' to ' . $endTime . '</b> | <span class="address">' /*. $event->description . ' - '*/ . $event->location . '</span></span></li>';
 		  }
 		}
 	echo '</ul>';

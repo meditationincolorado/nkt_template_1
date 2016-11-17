@@ -4840,29 +4840,63 @@ span.highlight {
 }
 .feature-section article ul#todays-classes {
 	list-style: none;
+	margin: 0;
 }
 .feature-section article ul#todays-classes li {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	padding: 0 20px;
+	text-transform: uppercase;
 }
 .feature-section article ul#todays-classes li h6 {
-	margin-bottom: 0;
+	margin: 0 auto;
 	line-height: 1;
 	font-size: 2.5em;
 	letter-spacing: -.1em;
 	color: #a6baab;
+	text-transform: lowercase;
 }
 .feature-section article ul#todays-classes li a {
 	top: 0;
-	display: inline-block;
+	display: block;
 	margin-bottom: 10px;
 	border-color: #a6baab;
 	color: #a6baab;
+	height: initial;
+	text-transform: uppercase;
 }
 .feature-section article ul#todays-classes li a.bold { font-weight: bold; }
-.feature-section article ul#todays-classes li span {
+.feature-section article ul#todays-classes li.cta_wrapper {
+	display: block;
+	margin: 0 auto;
+	line-height: 1.5;
+	max-width: 300px;
+	padding: 15px 0;
+}
+.feature-section article ul#todays-classes li.cta_wrapper span.info {
+	display: block;
+	color: #888;
+}
+.feature-section article ul#todays-classes li.cta_wrapper span.info span.address {
+	text-transform: initial;
+}
+.feature-section article ul#todays-classes li span b { 
+	font-weight: 400;
+}
+.feature-section article ul#todays-classes li#heading {
+	text-transform: lowercase;
+	padding: 0;
+	margin: 0;
+}
+.feature-section article ul#todays-classes li#heading span {
 	display: inline-block;
-	margin-left: 20px;
+	padding-top: 0;
+}
+.feature-section article ul#todays-classes li#heading a {
+	display: inline-block;
+	float: initial;
+	height: initial;
 	line-height: 1;
+	text-transform: lowercase;
 }
 .feature-section .vimeo_video iframe {
 	box-shadow: 0 0 10px rgba(0,0,0,.9);
@@ -4924,6 +4958,9 @@ span.highlight {
 	font-weight: 100;
 	line-height: 1;
 	margin: 10px auto 40px;
+}
+.feature-section #upcoming {
+	text-align: center;
 }
 /*.feature-section article div.content {
 	text-align: center;
@@ -5319,6 +5356,9 @@ span.mobile-hidden {
 		padding-right: 10%;
 		padding-left: 10%;
 	}
+	.feature-section article ul#todays-classes li h6 {
+		margin-top: 60px;
+	}
 	#reveal-cta { right: 30px; }
 	span.mobile-hidden { display: inline-block; }
 	span.mobile-shown { display: none; }
@@ -5392,6 +5432,27 @@ span.mobile-hidden {
 	.feature-section article#quote {
 		padding: 20px 40px;
 		font-size: 1.5em;
+	}
+	.feature-section #upcoming {
+		text-align: left;
+	}
+	.feature-section article ul#todays-classes li {
+		clear: both;
+	}
+	.feature-section article ul#todays-classes li a {
+		display: block;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 40px;
+	}
+	.feature-section article ul#todays-classes li#heading {
+		margin-bottom: 0;
+	}
+	.feature-section article ul#todays-classes li.cta_wrapper {
+		max-width: initial;
+	}
+	.feature-section article ul#todays-classes li.cta_wrapper span.info {
+		margin-top: 16px;
 	}
 	#footer-contact { padding: 100px 0 140px; } /*{ padding: 60px 20px 80px; }*/
 	#footer-contact h4 { font-size: 2.5em; }
