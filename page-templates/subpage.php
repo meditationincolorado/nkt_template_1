@@ -41,7 +41,7 @@ get_header(); ?>
 		    );
 
 	        $events = new WP_Query($args);
-	        while ($events->have_posts()) : $events->the_post(); ?>
+	        /*while ($events->have_posts()) : $events->the_post(); ?>
 				<?php echo 
 					'<span class="wp-data-event">' . 
 						'<span class="title">' . get_the_title() . '</span> - ' .
@@ -49,7 +49,7 @@ get_header(); ?>
 						'<span class="date">' . $post->event_date . '</span>' .
 					'</span>'; ?>
 	        <?php endwhile;
-	        wp_reset_postdata();
+	        wp_reset_postdata();*/
 		?>
 
 		<?php include(get_template_directory() . '/pretty_calendar.php'); ?>

@@ -472,8 +472,47 @@
 		}
 	});
 
+	function getParameterByName(name, url) {
+	    if (!url) {
+	      url = window.location.href;
+	    }
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
 	/* CALENDAR */
 	if($calendar.length) {
+		$(document).ready(function() {
+			var dayOfWeek = getParameterByName('dayOfWeek'),
+				className = getParameterByName('className'),
+				$destination = $('article#' + dayOfWeek + ' h2');  
+
+			if($destination.length) {
+				$('html,body').animate({
+					'scrollTop': $destination.offset().top - 120
+				},500);
+			}
+
+			var $dayLinks = $('[data-day] li');
+
+			$dayLinks.on('click', function() {
+				var $day = $(this).closest('[data-day]').attr('data-day'),
+					$destination = $('article#' + $day + ' h2');
+
+				if($destination.length) {
+					var $className = $(this).find('span').text();
+					
+					$('html,body').animate({
+						'scrollTop': $destination.offset().top - 120
+					},500);
+				}
+			});
+		});
+
 		var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
 			months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 			abbreviations = {
@@ -495,6 +534,8 @@
 
 		monthHeader.text(todaysMonth + ' ' + year);
 
+		//console.log('days in month');
+		//console.log(new Date(year, date.getMonth()+1, 0).getDate());
 		/* finding offset if 1st doesn't fall on Sunday */
 		for(i = 0; i < 7; i++) {
 			if(firstDay.toString().substring(0,3) == days[i].substring(0,3)) {
@@ -506,10 +547,15 @@
 			var dayNum = (i < offset) ? (daysInPreviousMonth - (offset-i-1)) : (i - offset)%31 + 1;
 			var otherClass = (i < offset || i - offset > daysInMonth - 1) ? 'other' : '';
 			
+			//if we have a full week of an upcoming month no need to display/add it to calendar
+			if(dayNum == 1 && i > 0 && days[i%7] == 'Sunday' && otherClass == 'other') {
+				break;
+			}
+
 			$calendar.append('<div class="day ' + otherClass + '" data-num="' + dayNum +'" data-month="' + todaysMonth + '" data-day="' + days[i%7] + '"><span class="date">' + dayNum + ' <span class="dayOfWeek">- ' + days[i%7] + '</span></span><ul></ul></div>');
 		}
 
-		var $today = $calendar.find('[data-num="' + d + '"][data-month="' + todaysMonth + '"]');
+		var $today = $calendar.find('[data-num="' + d + '"][data-month="' + todaysMonth + '"]').first();
 		
 			$today
 				.addClass('today')
@@ -553,11 +599,11 @@
 				classLocation = 'colorado-springs';
 			}
 
-			var $dayList = $calendar.find('[data-month="' + $month + '"][data-num="' + $dayNum + '"] ul'),
+			var $dayList = $calendar.find('[data-month="' + $month + '"][data-num="' + $dayNum + '"]:not(.other) ul'),
 				$day = $dayList.closest('.day');
 				
-				$day.addClass('isClass')
-				$dayList.append('<li data-location="' + classLocation +'" data-type="' + classType +'"><strong>' + $title + '</strong><br/>' + $time + '-' + $endTime + '</li>');
+				$day.addClass('isClass');
+				$dayList.append('<li data-location="' + classLocation +'" data-type="' + classType +'"><span><strong>' + $title + '</strong></span><br/>' + $time + '-' + $endTime + '</li>');
 
 		});
 

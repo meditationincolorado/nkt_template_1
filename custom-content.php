@@ -37,6 +37,7 @@
 		            $anchorTag = str_replace($find, $replace, get_the_title());
 		        ?>
 	        	<article id="<?php echo $anchorTag; ?>">
+	        		<a name="<?php echo $anchorTag; ?>"></a>
 		        	<h2><?php echo get_the_title(); ?></h2>
 		        	<?php echo the_content(); ?>
 	        	</article>

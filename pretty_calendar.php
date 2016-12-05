@@ -39,18 +39,22 @@
 	 	$service = new Google_Service_Calendar($client); 
 
 	 	$calendarId = 'media@meditationincolorado.org';
-	 	$effectiveDate = date("Y-m-d", strtotime($date)) . " +1 month";
+	 	//$effectiveDate = date("Y-m-d", strtotime($date)) . " +1 month";
+
+	 	//$firstDayOfMonth = new DateTime('first day of this month');
+	 	$firstDayOfMonth = date( 'Y-m-01' ) . 'T00:00:00-07:00';
+	 	echo date( 'Y-m-t' ) . 'T23:59:59-07:00';
 
 		$optParams = array(
 		  //'maxResults' => 3,
 		  'orderBy' => 'startTime',
 		  'singleEvents' => TRUE,
 		  //'timeMin' => date('c')
-		  'timeMin' => date('c'),
+		  'timeMin' => $firstDayOfMonth,
 		  'timeMax' => date( 'Y-m-t' ) . 'T23:59:59-07:00'
 		);
 
-		echo $effectiveDate;
+		//echo $effectiveDate;
 		$results = $service->events->listEvents($calendarId, $optParams);
 
 	 	if (count($results->getItems()) == 0) {

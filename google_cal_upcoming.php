@@ -26,11 +26,12 @@
 	$results = $service->events->listEvents($calendarId, $optParams);
 
 	echo '<ul id="todays-classes">';
+	echo "<li id='heading'><h6>today</h6> <span>or</span> <a href='./classes#calendar' class=''>see full calendar</a></li>";
+
 	 	if (count($results->getItems()) == 0) {
-		  print "No upcoming events found.<br/>";
+		  echo "There are no classes offered today but you can try free <a href=''>meditation at home</a>.";
 		} else {
 		  //print "Upcoming events:<br/>";
-		echo "<li id='heading'><h6>today</h6> <span>or</span> <a href='./classes#calendar' class=''>see full calendar</a></li>";
 
 		  foreach ($results->getItems() as $event) {
 		    $id = $event->id;
@@ -40,16 +41,18 @@
 		    //echo $id . '<br/>';
 
 		    $event = $service->events->get('media@meditationincolorado.org', $id);
-		    $cleanClassName = substr($event->summary, 0);//, strpos($event->summary, "-"));
+		    $cleanClassName = substr($event->summary, 0, strpos($event->summary, " -"));
+		    $hyphenatedClassName = str_replace(' ', '-', $cleanClassName);
 			$date = new DateTime($event->start["dateTime"]);
 			$dateString = $date->format('l, F jS');
+			$dayOfWeekToday = $date->format('l');
 			$time = ($date->format('i') != '00') ? $date->format('g:i') : $date->format('g');
 			$endDate = new DateTime($event->end["dateTime"]);
 			$endTime = ($endDate->format('i') != '00') ? $endDate->format('g:ia') : $endDate->format('ga');
 			
 			//echo $result;
 
-			echo '<li class="cta_wrapper"><a href="./classes" class="cta">' . $cleanClassName . '</a> <span class="info"><b>' . $time . ' to ' . $endTime . '</b> | <span class="address">' /*. $event->description . ' - '*/ . $event->location . '</span></span></li>';
+			echo '<li class="cta_wrapper"><a href="./classes?dayOfWeek=' . $dayOfWeekToday . '&className=' . $hyphenatedClassName . '" class="cta">' . $cleanClassName . '</a> <span class="info"><b>' . $time . ' to ' . $endTime . '</b> | <span class="address">' /*. $event->description . ' - '*/ . $event->location . '</span></span></li>';
 		  }
 		}
 	echo '</ul>';

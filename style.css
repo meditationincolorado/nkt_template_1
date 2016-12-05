@@ -5287,6 +5287,7 @@ span.mobile-hidden {
 }
 
 /* Calendar */
+#filter { display: none; }
 #google-api-output { display: none; }
 #calendar-container { margin: 100px auto 0; }
 #calendar-container #calendar { margin-top: 20px; text-transform: lowercase; }
@@ -5466,7 +5467,7 @@ span.mobile-hidden {
 		border: 1px solid #eee;
 		border-right: 0;
 		border-top: 0;
-		height: 140px; /*170*/
+		height: 170px; /*170*/
 		overflow-y: scroll;
 		padding: 5px;
 	}
