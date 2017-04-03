@@ -34,25 +34,10 @@ get_header(); ?>
 
 	<!-- Content -->
 	<?php if ($post->post_name == 'classes') { ?>
-		<?php
-			$args = array( 
-		      'post_type' => 'post',
-		      'category_name' => 'Empowerment Page'
-		    );
 
-	        $events = new WP_Query($args);
-	        /*while ($events->have_posts()) : $events->the_post(); ?>
-				<?php echo 
-					'<span class="wp-data-event">' . 
-						'<span class="title">' . get_the_title() . '</span> - ' .
-						'<span class="content">' . $post->post_content . '</span> - ' .
-						'<span class="date">' . $post->event_date . '</span>' .
-					'</span>'; ?>
-	        <?php endwhile;
-	        wp_reset_postdata();*/
-		?>
-
-		<?php include(get_template_directory() . '/pretty_calendar.php'); ?>
+		<div id="google-calendar" class="col-xs-12 col-sm-10 col-sm-offset-1">
+			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;ctz=America%2FDenver" frameborder="0" scrolling="no"></iframe>
+		</div>
 	<?php } ?>
 
 	<?php include(get_template_directory() . '/custom-content.php'); ?>

@@ -5287,6 +5287,15 @@ span.mobile-hidden {
 }
 
 /* Calendar */
+#google-calendar {
+	margin-top: 140px;
+	margin-bottom: 100px;
+}
+#google-calendar iframe {
+	margin: 0 auto;
+	min-height: calc(70vh);
+	width: 100%;
+}
 #filter { display: none; }
 #google-api-output { display: none; }
 #calendar-container { margin: 100px auto 0; }
