@@ -419,41 +419,71 @@
 
 	$navSections.each(function() {
 		var $navSection = $(this),
-			$headers = $navSection.find('h5'),
+			$headers = $navSection.find('h4'),
+			$subHeaders = $navSection.find('h5'),
 			$eventsSection = $(this).find('#Events-and-Retreats');
 
 		if($headers.length > 0) {
-			var ct = 0;
+			var headerCt = 0;
 
 			$navSection.find('h2')
 				.after('<div class="content"></div>')
 				.after('<span class="tabs"></span>');
 
 			if($eventsSection.length) {
-				var tabText = '<a class="tab" data-num="' + 0 +'">' + 'Tara Empowerment' + '</a>'; //ct
+				var tabText = '<a class="tab" data-num="' + 0 +'">' + 'Tara Empowerment' + '</a>'; //headerCt
 				$navSection.find('span.tabs').append(tabText);
 			}
 
 			$headers.each(function() {
 				var $header = $(this),
 					$contentDiv = $navSection.find('.content'),
-					$content = $header.next('article');
+					$content = $header.next('article'),
+					$subHeaders = $content.find('h5'),
+					tabText = '<a class="tab" data-num="' + headerCt +'">' + $header.text() + '</a>';
 
 				$header.hide();
-				$content.attr('data-num', ct);
-				if( ct == 0) $content.addClass('active');
+				$content.attr('data-num', headerCt);
+				if( headerCt == 0) $content.addClass('active');
 				$contentDiv.append($content);
 
-				var tabText = '<a class="tab" data-num="' + ct +'">' + $header.text() + '</a>';
 				$header.parents('.nav-section').find('span.tabs').append(tabText);
 				
-				ct++;
+				if($subHeaders.length > 0) {
+					var subHeaderCt = 0;
+
+					$subHeaders.each(function() {
+						var $subHeader = $(this),
+							$articleParent = $subHeader.closest('article[data-num]'),
+							$headerSection = $subHeader.next('section'),
+							isActive = (subHeaderCt == 0) ? ' active' : '',
+							bullet = (subHeaderCt == $subHeaders.length - 1) ? '' : ' &bull; ',
+							subTabText = '<a class="sub-tab' + isActive + ' " data-num="' + subHeaderCt +'">' + $subHeader.text() + '</a>';// + bullet;
+
+						if($articleParent.find('.sub-tabs').length == 0) {
+							$articleParent.prepend('<span class="sub-tabs"></span>');
+						}
+
+						$subHeader.hide();
+						$articleParent.find('.sub-tabs').append(subTabText);
+
+						$headerSection
+							.addClass(!subHeaderCt ? 'active' : '')
+							.addClass('sub-section')
+							.attr('data-num', subHeaderCt++);
+					});
+
+					$subHeaders.remove();
+				}
+
+				headerCt++;
 			});
 
 			$navSection.find('a.tab[data-num="0"]')
 				.addClass('active');
 
-			var $tabs = $(this).find('a.tab');
+			var $tabs = $(this).find('a.tab'),
+				$subTabs = $(this).find('a.sub-tab');
 
 			$tabs.on('click', function() {
 				var $tab = $(this),
@@ -461,9 +491,26 @@
 					$content = $navSection.find('article[data-num="' + $tabNum + '"]'),
 					$allContent = $navSection.find('article[data-num]');
 
-				$allContent.removeClass('active');
-				$content.addClass('active');
+				$allContent
+					.removeClass('active');
+				$content
+					.addClass('active');
+
 				$tabs.removeClass('active');
+				$tab.addClass('active');
+
+			});
+
+			$subTabs.on('click', function() {
+				var $tab = $(this),
+					$tabNum = $tab.attr('data-num'),
+					$section = $navSection.find('section[data-num="' + $tabNum + '"]'),
+					$allSections = $navSection.find('section[data-num]'),
+					$siblingTabs = $tab.siblings('.sub-tab');
+
+				$allSections.removeClass('active');
+				$section.addClass('active');
+				$siblingTabs.removeClass('active');
 				$tab.addClass('active');
 
 			});
