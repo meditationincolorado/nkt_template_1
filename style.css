@@ -4485,10 +4485,11 @@ span.no-wrap {
 #main-nav a#logo svg .CO {
 	fill: #a6baab; /*#4fb0e0;*/
 }
-#main-nav ul {
-	display: none;
+#main-nav ul, #main-nav ul#mobile {
 	float: right;
 }
+#main-nav ul#mobile { display: inline-block; }
+#main-nav ul { display: none; }
 
 #banner-cta {
 	position: fixed;
@@ -4577,7 +4578,7 @@ span.highlight {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
+  padding: 20px !important;
 }
 .slick-slider {
 	padding: 0;
@@ -4718,27 +4719,30 @@ span.highlight {
 	cursor: pointer;
 	opacity: .7;
 }
-#hero-section #mobile-nav {
+#hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
 	bottom: 90px;
+	left: 0;
+	padding: 0 20px;
 	width: 100%;
 	text-align: center;
 }
-#hero-section #mobile-nav a {
+#subpage-hero #mobile-nav { bottom: 25px;}
+#hero-section #mobile-nav a, #subpage-hero #mobile-nav a {
 	color: #ffffff;
 	font-weight: 500;
 	font-size: 1.4em;
 	margin: 0 5px !important;
 }
-#hero-section #mobile-nav a:first-child {
+#hero-section #mobile-nav a:first-child, #subpage-hero #mobile-nav a:first-child {
 	margin-left: 0 !important;
 }
-#hero-section #mobile-nav a:last-child {
+#hero-section #mobile-nav a:last-child, #subpage-hero #mobile-nav a:last-child {
 	margin-right: 0 !important;
 }
 #hero-section .scroll-cta {
 	position: absolute;
-	bottom: -80px;
+	bottom: -70px;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -4774,7 +4778,7 @@ span.highlight {
 	top: 0;
 }
 
-#sub-nav a, #hero-section #mobile-nav a {
+#sub-nav a, #hero-section #mobile-nav a, #subpage-hero #mobile-nav a {
 	font-family: 'gotham';
 	font-weight: 500;
 	margin: 0 10px;
@@ -4791,7 +4795,7 @@ span.highlight {
 #sub-nav a:last-child {
 	margin-right: 0;
 }
-#hero-section #mobile-nav a {
+#hero-section #mobile-nav a, #subpage-hero #mobile-nav a {
 	font-weight: 300;
 	opacity: 1;
 	color: #ffffff;
@@ -5063,7 +5067,7 @@ span#for-beginngers { display: inline-block; color: #333; font-size: .8em; margi
 	bottom: 20px;
 	right: 20px;
 	width: 90%;
-	height: 200px;
+	height: 140px;
 	border-radius: 3px;
 	padding: 20px;
 	background: #ffffff;
@@ -5115,7 +5119,7 @@ span#for-beginngers { display: inline-block; color: #333; font-size: .8em; margi
 #sticky-blurb hgroup a.sticky-cta {
 	position: relative;
 	top: 10px;
-	display: inline-block;
+	display: none;
 	margin-top: 0;
 	padding: 10px 18px;
     background: #a6baab;
@@ -5185,18 +5189,18 @@ span.mobile-hidden {
 }
 
 /* subpages */
-#subpage_hero {
+#subpage-hero {
 	height: calc(40vh);
 }
-#subpage_hero .tint {
+#subpage-hero .tint {
 	background-color: rgba(0,0,0,.45);
 }	
-#subpage_hero hgroup { 
+#subpage-hero hgroup { 
 	color: white;
 	max-width: initial;
 	text-align: center; 
 }
-#subpage_hero hgroup h1 { 
+#subpage-hero hgroup h1 { 
 	font-size: 3em;
 	text-transform: lowercase;
 	letter-spacing: -.1em;
@@ -5381,7 +5385,6 @@ span.mobile-hidden {
 }
 
 @media (min-width: 590px) {
-	#hero-section #mobile-nav { display: none; }
 	#main-nav {
 		top: 50px;
 	}
@@ -5394,6 +5397,14 @@ span.mobile-hidden {
 		margin: 0 20px 0 0;
 		float: initial;
 	}
+}
+
+@media (min-width: 768px) { /* sm */
+	.col-xs-12 {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	#hero-section #mobile-nav, #subpage-hero #mobile-nav { display: none; }
 	#main-nav ul {
 		list-style: none;
 		margin: 0;
@@ -5401,6 +5412,7 @@ span.mobile-hidden {
 		position: relative; 
 		display: inline-block;
 	}
+	#main-nav ul#mobile { display: none; }
 	#main-nav ul li {
 		float; left;
 		display: inline;
@@ -5417,17 +5429,13 @@ span.mobile-hidden {
 	#main-nav ul:last-child li:last-child {
 		margin-right: 0;
 	}
-}
-
-@media (min-width: 768px) { /* sm */
-	.col-xs-12 {
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-	#subpage_hero {
+	#hero-section .scroll-cta { bottom: -80px; }
+	#sticky-blurb { height: 200px; }
+	#sticky-blurb hgroup a.sticky-cta { display: inline-block; }
+	#subpage-hero {
 		height: calc(50vh);
 	}
-	#subpage_hero hgroup h1 { 
+	#subpage-hero hgroup h1 { 
 		font-size: 5.5em;
 	}
 	.slick-dots { display: block !important; opacity: .8; }
@@ -5490,7 +5498,7 @@ span.mobile-hidden {
 @media (min-width: 1024px) { /* sm */
 	.slick-slider .slick-track .slick-slide.lefty { background-position-x: center; }
 
-	#subpage_hero {
+	#subpage-hero {
 		height: calc(70vh);
 	}
 }

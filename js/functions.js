@@ -270,7 +270,7 @@
 			},500);
 		});
 
-	var $hero = $('#hero, #subpage_hero');
+	var $hero = $('#hero, #subpage-hero');
 
 		_window.on('scroll', function() {
 			var $bannerCTAhidden = $bannerCTA.hasClass('hidden'),

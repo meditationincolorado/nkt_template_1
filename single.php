@@ -17,7 +17,7 @@ get_header(); ?>
 	$thumb_url = $thumb_url_array[0];	
 ?>
 
-	<div id="subpage_hero" class="row cover center_vert_parent" style='background-image: url("<?php echo $thumb_url; ?>");'>
+	<div id="subpage-hero" class="row cover center_vert_parent" style='background-image: url("<?php echo $thumb_url; ?>");'>
 		<div class="tint"></div>
 			<hgroup class="col-xs-12 col-xs-10 col-xs-offset-1 center_vert">
 				<h1><?php echo get_the_title(); ?></h1>
