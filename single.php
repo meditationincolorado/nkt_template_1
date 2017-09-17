@@ -5,6 +5,8 @@
  * @package WordPress
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
+ *
+ * <?php include(get_template_directory() . '/subpage_subnav.php'); ?>
  */
 
 get_header(); ?>
@@ -24,12 +26,12 @@ get_header(); ?>
 				<p><?php echo $post->subpage_blurb; ?></p>
 			</hgroup>
 	</div>
-	<?php include(get_template_directory() . '/subpage_subnav.php'); ?>
-	<div id="content" class="row">
+
+	<div id="content" class="row single-php">
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 			<?php the_content(); ?>
 
-			<?php
+			<!-- <?php
 				$args = array( 
 		      'post_type' => 'post',
 		      'posts_per_page' => 5,
@@ -46,7 +48,7 @@ get_header(); ?>
 		        	</article>
 		        <?php endwhile;
 		        wp_reset_postdata();
-			?>
+			?> -->
 		</div>
 	</div>
 <?php endwhile; endif; ?>

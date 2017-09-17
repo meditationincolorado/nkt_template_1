@@ -5209,7 +5209,10 @@ span.mobile-hidden {
 	color: #ffffff; 
 }
 #content {
-	padding: 140px 0 0;
+	padding: 140px 20px 0;
+}
+#content.single-php {
+    padding-bottom: 100px;
 }
 #content img {
 	max-width: 300px;

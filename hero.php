@@ -83,13 +83,15 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
+        var fadeMe = ($(window).width() > 1024) ? true : false;
+
       	$('.hero_slider').slick({
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 7000,
 			dots: true,
-			infinite: true
-			//speed: 1000,
-			//fade: true,
+			infinite: true,
+			fade: fadeMe,
+			speed: 1000
 			//cssEase: 'linear'
       	});
     });
