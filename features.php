@@ -2,7 +2,9 @@
 	
 	<article id="upcoming" class="row">
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        
+            <!-- <p>Our purpose is to help people discover the benefits of meditation and to solve their daily problems through a special presentation of Buddha’s teachings that we call “modern Buddhism”.</p>
+            <p>Our teachings are clear, practical and very accessible to modern people. You will find that with modern Buddhism you will be able to reduce stress, improve relationships and find more meaning in life.</p>
+            <p>Everyone is welcome to join our activities, including those who are just curious about meditation or Buddhism. No special clothing is necessary, and we usually meditate in chairs, making it accessible and comfortable for everyone.</p> -->
 		</div>
 	</article>
 
@@ -31,7 +33,7 @@
 				$leftSettings = 'col-sm-6';
 				$rightSettings = ($hasMedia) ? 
 					'col-sm-6': 
-					'col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4';
+                    'col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4';
 			?>
 
 	        <article 
@@ -40,7 +42,10 @@
 	        	style="
 	        		color: <?php echo $post->font_color ?>;
 	        		<?php 
-	        				echo 'background-color: ' . $post->feature_section_background_color . '; ';
+                            echo 'background-color: ' . $post->feature_section_background_color . '; ';
+                            if($bkgColor == '#fff' || $bkgColor == '#ffffff' || $bkgColor == '') {
+                                echo 'border-top: 1px solid rgba(0,0,0,.1); ';
+                            }
 	        		?>
 					<?php 
 						if ($thumb_url != '' && $bkgColor == '') {

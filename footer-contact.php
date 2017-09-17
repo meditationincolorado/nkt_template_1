@@ -1,8 +1,8 @@
 
 <section id="footer-contact" class="row" data-cta-destination='signup'
 	<?php 
-		$page = get_page_by_title( 'Home' );
-		if(has_post_thumbnail($page->ID)) {
+        $page = get_page_by_title( 'Home' );
+		if(isset($page) && has_post_thumbnail($page->ID)) {
 			echo 'style="background-image: url(' . $page->free_meditation_bkg_0 . ');"';
 		}
 	?>

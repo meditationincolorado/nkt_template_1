@@ -4819,7 +4819,7 @@ span.highlight {
 }
 .feature-section article {
 	position: relative;
-	padding: 120px 0 180px;
+	padding: 120px 20px 180px;
 	background: url('') no-repeat right top scroll; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
