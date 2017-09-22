@@ -2,7 +2,7 @@
 
 	<?php if (get_post()->post_content !== '') {
 		echo 
-			'<div class="col-xs-12 col-sm-10 col-sm-offset-1">' .
+			'<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">' .
 				'<section id="subpage_content">' .
 					get_post()->post_content .
 				'</section>' .
@@ -30,7 +30,7 @@
     			$style = 'style="' . $bkgColor . $fontColor . '"';
     		?>
 		<section class="nav-section" <?php echo $style; ?>>
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
       			<?php 
 		            $find = array(" ", "/", "&","#038;");
 		            $replace = array("-","-","and","");

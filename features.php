@@ -1,6 +1,6 @@
 <section class="feature-section">
 	
-	<article id="upcoming" class="row">
+	<article id="upcoming" class="row" data-cta-destination="upcoming">
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <!-- <p>Our purpose is to help people discover the benefits of meditation and to solve their daily problems through a special presentation of Buddha’s teachings that we call “modern Buddhism”.</p>
             <p>Our teachings are clear, practical and very accessible to modern people. You will find that with modern Buddhism you will be able to reduce stress, improve relationships and find more meaning in life.</p>

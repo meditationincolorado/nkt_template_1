@@ -14,7 +14,7 @@
 
 
 		<div id='scroll-to-top' class='retracted'>
-			<svg enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Chevron_Down_Circle"><path d="M16,0C7.164,0,0,7.163,0,16c0,8.836,7.164,16,16,16c8.837,0,16-7.164,16-16C32,7.163,24.837,0,16,0z M16,30   C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2c7.72,0,14.031,6.28,14.031,14C30.031,23.72,23.72,30,16,30z" fill="#121313"/><path d="M22.3,12.393l-6.285,6.195l-6.285-6.196c-0.394-0.391-1.034-0.391-1.429,0   c-0.394,0.391-0.394,1.024,0,1.414l6.999,6.9c0.384,0.38,1.044,0.381,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   C23.334,12.003,22.695,12.003,22.3,12.393z" fill="#121313"/></g><g/><g/><g/><g/><g/><g/></svg>
+			<svg enable-background="new 0 0 32 32" height="40px" version="1.1" viewBox="0 0 32 32" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Chevron_Down_Circle"><path d="M16,0C7.164,0,0,7.163,0,16c0,8.836,7.164,16,16,16c8.837,0,16-7.164,16-16C32,7.163,24.837,0,16,0z M16,30   C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2c7.72,0,14.031,6.28,14.031,14C30.031,23.72,23.72,30,16,30z" fill="#121313"/><path d="M22.3,12.393l-6.285,6.195l-6.285-6.196c-0.394-0.391-1.034-0.391-1.429,0   c-0.394,0.391-0.394,1.024,0,1.414l6.999,6.9c0.384,0.38,1.044,0.381,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   C23.334,12.003,22.695,12.003,22.3,12.393z" fill="#121313"/></g><g/><g/><g/><g/><g/><g/></svg>
 		</div>
 		<?php 
 			$wpb_all_query = new WP_Query(
@@ -56,19 +56,20 @@
 		<footer class="row">
 			<section class="col-xs-12 col-sm-10 col-sm-offset-1">
 				<ul class="col-xs-12 col-sm-3">
-					<li class="heading">Sitemap</li>
-					<li><a href="" target="_blank">Home</a></li>
-					<li><a href="" target="_blank">Classes</a></li>
-					<li><a href="" target="_blank">Meditation</a></li>
-					<li><a href="" target="_blank">About</a></li>
+					<li class="heading">KMC Colorado</li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/classes">Classes</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/buddhism">Kadampa Buddhism</a></li>
+					<li><a href="/contact">Contact</a></li>
 					<li>&nbsp;</li>
 					<li class="heading">Helpful Links</li>
 					<li><a href="http://kadampa.org/" target="_blank">Kadampa Tradition</a></li>
 					<li><a href="http://www.tharpa.com/us/" target="_blank">Tharpa Publications</a></li>
-					<li><a href="" target="_blank">Free EBook: Modern Buddhism</a></li>
-					<li>&nbsp;</li>
+					<li><a href="http://emodernbuddhism.com/" target="_blank">Free EBook: Modern Buddhism</a></li>
+					<!-- <li>&nbsp;</li>
 					<li class="heading">Upcoming Events</li>
-					<li><a href="" target="_blank">Refuge Retreat</a></li>
+					<li><a href="" target="_blank">Refuge Retreat</a></li> -->
 				</ul>
 
 				<ul class="col-xs-12 col-sm-3">
@@ -87,8 +88,9 @@
 				        while ($socialMediaInfo->have_posts()) : $socialMediaInfo->the_post(); ?>
 						
 						<li><a href="<?php echo $post->facebook_link ?>" target="_blank">Facebook</a></li>
-						<li><a href="<?php echo $post->twitter_link ?>" target="_blank">Twitter</a></li>
-						<li><a href="<?php echo $post->youtube_link ?>"" target="_blank">Youtube</a></li>
+						<!-- <li><a href="<?php echo $post->twitter_link ?>" target="_blank">Twitter</a></li> -->
+						<li><a href="<?php echo $post->instagram_link ?>"" target="_blank">Instagram</a></li>
+                        <li><a href="<?php echo $post->youtube_link ?>"" target="_blank">Youtube</a></li>
 					<?php  
 						endwhile;
 						wp_reset_postdata();
@@ -112,8 +114,9 @@
 					    while ($classLocations->have_posts()) : $classLocations->the_post();
 					?>
 					<li>
-						<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a><br/>
-						<?php echo $post->address ?><br/><br/>
+						<!-- <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a><br/> -->
+						<strong><?php echo get_the_title(); ?></strong><br/>
+                        <?php echo $post->address ?><br/><br/>
 					</li>
 					<? 
 						endwhile;

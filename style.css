@@ -5037,7 +5037,7 @@ span#for-beginngers { display: inline-block; color: #333; font-size: .8em; margi
 	bottom: 20px;
 	right: 20px;
 	transition: all .2s linear;
-	opacity: 1;
+	opacity: .5;
 	-webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
@@ -5046,7 +5046,7 @@ span#for-beginngers { display: inline-block; color: #333; font-size: .8em; margi
 }
 #scroll-to-top:hover {
 	cursor: pointer;
-	opacity: .7;
+	opacity: 1;
 }
 #scroll-to-top svg path {
 	transition: all .2s linear;
@@ -5333,6 +5333,10 @@ span.mobile-hidden {
 	min-height: calc(70vh);
 	width: 100%;
 }
+
+#google-calendar iframe#desktop {
+    display: none;
+}
 #filter { display: none; }
 #google-api-output { display: none; }
 #calendar-container { margin: 100px auto 0; }
@@ -5525,7 +5529,13 @@ span.mobile-hidden {
 		border-right: 1px solid #eee;
 	}
 	footer { padding: 120px 20px; }
-	
+    
+    #google-calendar iframe#mobile {
+        display: none;
+    }
+    #google-calendar iframe#desktop {
+        display: block;
+    }
 }
 
 @media (min-width: 1024px) { /* sm */

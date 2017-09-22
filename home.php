@@ -23,6 +23,6 @@ get_header(); ?>
 <?php include('subnav.php'); ?>
 <?php include('features.php'); ?>
 
-<?php include('footer-contact.php'); ?>
+<!-- <?php include('footer-contact.php'); ?> -->
 <?php get_footer(); ?>
 

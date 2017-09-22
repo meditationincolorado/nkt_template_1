@@ -36,7 +36,8 @@ get_header(); ?>
 	<?php if ($post->post_name == 'classes') { ?>
 
 		<div id="google-calendar" class="col-xs-12 col-sm-10 col-sm-offset-1">
-			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;ctz=America%2FDenver" frameborder="0" scrolling="no"></iframe>
+            <iframe id="desktop" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;ctz=America%2FDenver" frameborder="0" scrolling="no"></iframe>
+            <iframe id="mobile" src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;ctz=America%2FDenver" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 		</div>
 		
 	<?php } ?>
