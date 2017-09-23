@@ -132,6 +132,9 @@
 					<li><a href="mailto:info@meditationincolorado.org">e: info@meditationincolorado.org</a></li>
 					<li><a href="">p: 303.813.9551</a></li>
 					<li><br/><strong>Everyone is Welcome</strong></li>
+					<li id="addresses">
+						<?php include('nkt_svg.php'); ?>
+					</li>
 				</ul>
 			</section>
 			<section class="col-xs-12 col-sm-10 col-sm-offset-1">
