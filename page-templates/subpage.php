@@ -36,8 +36,8 @@ get_header(); ?>
 	<?php if ($post->post_name == 'classes') { ?>
 
 		<div id="google-calendar" class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <iframe id="desktop" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;ctz=America%2FDenver" frameborder="0" scrolling="no"></iframe>
-            <iframe id="mobile" src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;ctz=America%2FDenver" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <iframe id="desktop" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;src=meditationincolorado.org_7ohr4kkqmn0uja1h94te7b919s%40group.calendar.google.com&amp;color=%235229A3&amp;src=meditationincolorado.org_n7apuls8319n0df3gfpgcig5dc%40group.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FDenver" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <iframe id="mobile" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=media%40meditationincolorado.org&amp;color=%231B887A&amp;src=meditationincolorado.org_7ohr4kkqmn0uja1h94te7b919s%40group.calendar.google.com&amp;color=%235229A3&amp;src=meditationincolorado.org_n7apuls8319n0df3gfpgcig5dc%40group.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FDenver" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 		</div>
 		
 	<?php } ?>
