@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<?php include('banner-cta.php'); ?>
+<!-- <?php include('banner-cta.php'); ?> -->
 <?php include('nav.php'); ?>
 <div id="hero-section">
 	<?php include('hero.php'); ?>

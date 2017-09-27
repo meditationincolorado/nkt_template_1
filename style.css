@@ -4772,7 +4772,7 @@ span.highlight {
 	position: fixed;
 }
 #sub-nav.fixed.with-banner { 
-	top: 30px;
+	top: 0; /* 30px; */
 }
 #sub-nav.fixed.with-banner[data-subpage="true"] { 
 	top: 0;
