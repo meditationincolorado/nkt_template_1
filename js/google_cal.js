@@ -15,6 +15,27 @@ function convertDate(date) {
     )
 }
 
+function prettyTime(timeStr) {
+    var ampm = 'am',
+        startOfTimeIndex = timeStr.indexOf('T') + 1,
+        hour = timeStr.substring(startOfTimeIndex, startOfTimeIndex + 2),
+        minute = timeStr.substring(startOfTimeIndex + 3, timeStr.length - 9)
+
+    if (parseInt(hour) > 12) {
+        hour = (parseInt(hour) % 12).toString()
+        ampm = 'pm'
+    } else if (parseInt(hour) === 12) {
+        ampm = 'pm'
+    } else {
+        hour = hour.substring(1, hour.length)
+    }
+
+    return hour
+        .concat(':')
+        .concat(minute)
+        .concat(ampm)
+}
+
 var now = new Date(),
     week = new Date(),
     time = '00:00:00Z', //now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(),
@@ -49,8 +70,8 @@ $.ajax({
         for (var i = 0; i < result.items.length; i++) {
             var title = result.items[i].summary,
                 location = result.items[i].location,
-                start = result.items[i].start.dateTime,
-                end = result.items[i].end.dateTime
+                start = prettyTime(result.items[i].start.dateTime),
+                end = prettyTime(result.items[i].end.dateTime)
 
             // console.log(result.items[0])
             // $('#special-events').append(
