@@ -13,7 +13,7 @@
 	<article id="upcoming" class="row" data-cta-destination="upcoming">
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <ul id="todays-classes">
-	            <li id='heading'><h6>today</h6> <span>or</span> <a href='./classes#calendar' class=''>see full calendar</a></li>
+	            <li id='heading'><h6>Coming Up</h6> <span>or</span> <a href='./classes#calendar' class=''>see full calendar</a></li>
             </ul>
 
             <section id="special-events"></section>

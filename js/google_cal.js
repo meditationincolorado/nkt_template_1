@@ -1,10 +1,36 @@
+// Setting up dates
+function convertDate(date) {
+    var yyyy = date.getFullYear().toString(),
+        mm = (date.getMonth() + 1).toString(),
+        dd = date.getDate().toString(),
+        mmChars = mm.split(''),
+        ddChars = dd.split('')
+
+    return (
+        yyyy +
+        '-' +
+        (mmChars[1] ? mm : '0' + mmChars[0]) +
+        '-' +
+        (ddChars[1] ? dd : '0' + ddChars[0])
+    )
+}
+
+var now = new Date(),
+    week = new Date(),
+    time = '00:00:00Z', //now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(),
+    today = convertDate(now) + 'T' + time
+
+week.setDate(week.getDate() + 7)
+var weekFromToday = convertDate(week) + 'T' + time
+
+// API Implementation
 var apiString = 'https://www.googleapis.com/calendar/v3/calendars/',
     apiKeyParam = '?key=AIzaSyDKwlYvY8MyAiFQUb7GMZWW1vMzYWIKlFo',
     getEvents = '/events',
     singleEvents = '&singleEvents=true',
     orderBy = '&orderBy=startTime',
-    timeMin = '&timeMin=2017-09-26T00:00:00Z',
-    timeMax = '&timeMax=2017-10-1T23:59:59Z'
+    timeMin = '&timeMin='.concat(today),
+    timeMax = '&timeMax='.concat(weekFromToday)
 
 var glenarm_classes = apiString
     .concat('media@meditationincolorado.org')
@@ -14,12 +40,6 @@ var glenarm_classes = apiString
     .concat(orderBy)
     .concat(timeMin)
     .concat(timeMax)
-
-var special_events =
-    apiString +
-    'meditationincolorado.org_l19o5o3uhcb4r7stv9affdjdg0%40group.calendar.google.com' +
-    getEvents +
-    apiKeyParam
 
 $.ajax({
     url: glenarm_classes,
@@ -60,3 +80,9 @@ $.ajax({
         }
     },
 })
+
+// var special_events =
+// apiString +
+// 'meditationincolorado.org_l19o5o3uhcb4r7stv9affdjdg0%40group.calendar.google.com' +
+// getEvents +
+// apiKeyParam
