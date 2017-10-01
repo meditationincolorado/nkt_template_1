@@ -11,15 +11,15 @@
 <section class="feature-section">
 	
 	<article id="upcoming" class="row" data-cta-destination="upcoming">
-		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
             <ul id="todays-classes">
 	            <li id='heading'><h6>Coming Up</h6> <span>or</span> <a href='./classes#calendar' class=''>see full calendar</a></li>
             </ul>
 
-            <section id="special-events"></section>
-            <!-- <p>Our purpose is to help people discover the benefits of meditation and to solve their daily problems through a special presentation of Buddha’s teachings that we call “modern Buddhism”.</p>
-            <p>Our teachings are clear, practical and very accessible to modern people. You will find that with modern Buddhism you will be able to reduce stress, improve relationships and find more meaning in life.</p>
-            <p>Everyone is welcome to join our activities, including those who are just curious about meditation or Buddhism. No special clothing is necessary, and we usually meditate in chairs, making it accessible and comfortable for everyone.</p> -->
+            <ul id="calender-events"></ul>
+            <!-- <ul id="special-events">
+                <li id='heading'><h6>Special Events</h6></li>
+            </ul> -->
 		</div>
 	</article>
 
