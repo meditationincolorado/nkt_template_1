@@ -5322,7 +5322,7 @@ span.mobile-hidden {
 	text-transform: lowercase;
 	font-size: 20px;
 	line-height: 1;
-	margin-right: 20px;
+	margin: 0 20px 10px 0;
 	padding: 6px;
 	border: 1px solid rgba(0,0,0,0);
 	transition: all .2s linear;
