@@ -77,7 +77,6 @@
 				<?php if ($post->feature_section_background_color == '') {
                     if($post->tint_level || $post->tint_level == 0) {
                         $tint = 'background-color: rgba(0, 0, 0, ' . $post->tint_level . ');';
-                        echo 'Portugal';
 					}
 					echo '<div class="tint" style="' . $tint . ';"></div>';
 				} ?>
