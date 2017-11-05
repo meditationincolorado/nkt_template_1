@@ -40,7 +40,7 @@
 				?>
 
                 <section id="sticky-blurb" data-name="<?php echo $post->post_name; ?>">
-                    <a href="">
+                    <a href="<?php echo get_permalink(); ?>">
 					<div id='background' <?php echo $bkgStyle ?>></div>
 					<div id="tint"></div>
 					<div id="close" <?php echo $fontStyle ?>>X</div>

@@ -5118,6 +5118,9 @@ span#for-beginngers { display: inline-block; color: #333; font-size: .8em; margi
   	transform-style: preserve-3d;
   	transition: all .2s linear;
 }
+#sticky-blurb a {
+    color: white !important;
+}
 #sticky-blurb:hover { opacity: 1; }
 #sticky-blurb.show { display: block; }
 #sticky-blurb #background, #sticky-blurb #tint {
