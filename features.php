@@ -104,7 +104,7 @@
 						<p class='subheader'><?php echo $post->feature_subheader ?></p>
 						<p><?php echo $post->feature_blurb ?></p>
 						<?php if ($post->feature_cta_text) { 
-							echo '<div class="cta_wrapper"><a class="cta' . $blackClass. '" href="' . get_permalink() . '">' . $post->feature_cta_text .'</a></div>';
+							echo '<div class="cta_wrapper"><a class="cta' . $blackClass. '" href="' . $post->feature_cta_link . '">' . $post->feature_cta_text .'</a></div>';
 						} ?>
 					</div>
 
