@@ -25,7 +25,7 @@
             }) :
             null ;
       
-      console.log('meditation_class: ', meditation_class.replace(/%20/g, " ").replace(/%27/g, "'")
+      console.log('meditation_class: ', meditation_class.replace(/%20/g, " ").replace(/%27/g, "'"))
       if(activeDay !== null) simulateClick(activeDay[0]);
       if(activeClass !== null)  simulateClick(activeClass[0]);
       $('html,body').animate({ scrollTop: destination}, 500);
