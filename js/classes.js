@@ -20,7 +20,9 @@
         activeDay = $('a').filter(function(index) { return $(this).text() === day.concat("s"); }),
         activeClass = 
           (meditation_class !== false) ? 
-            $('a').filter(function(index) { return $(this).text() === meditation_class.replace(/%20/g, " ") }) :
+            $('a').filter(function(index) { 
+              return $(this).text() === meditation_class.replace(/%20/g, " ").replace(/%27/g, "'") 
+            }) :
             null ;
       
       if(activeDay !== null) simulateClick(activeDay[0]);
