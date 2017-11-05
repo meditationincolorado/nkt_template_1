@@ -17,8 +17,14 @@
       $classes.find('.active').removeClass('active');
 
       var destination = $classes.offset().top - 100,
-        activeDay = $('a').filter(function(index) { return $(this).text() === day.concat("s"); }),
-        activeClass = $('a').filter(function(index) { return $(this).text() === meditation_class.replace(/%20/g, " ") });
+        activeDay = 
+          (day !== undefined) ? 
+            $('a').filter(function(index) { return $(this).text() === day.concat("s"); }) :
+            null,
+        activeClass = 
+          (meditation_class !== undefined) ? 
+            $('a').filter(function(index) { return $(this).text() === meditation_class.replace(/%20/g, " ") }) :
+            null ;
       
       if(activeDay[0] !== undefined) simulateClick(activeDay[0]);
       if(activeDay[0] !== undefined)  simulateClick(activeClass[0]);
