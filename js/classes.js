@@ -25,6 +25,7 @@
             }) :
             null ;
       
+      console.log('activeClass', activeClass)
       if(activeDay !== null) simulateClick(activeDay[0]);
       if(activeClass !== null)  simulateClick(activeClass[0]);
       $('html,body').animate({ scrollTop: destination}, 500);
