@@ -89,6 +89,10 @@
         ga('create', activeID, 'auto');
         ga('send', 'pageview');
     </script>
+
+
+    <!-- Classes -->
+    <script src="<?php echo get_template_directory_uri(); ?>/js/classes.js" async></script>
 	<?php wp_head(); ?>
 </head>
 

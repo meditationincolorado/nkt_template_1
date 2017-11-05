@@ -54,8 +54,6 @@ var glenarm_classes = apiString
 $.ajax({
   url: glenarm_classes,
   success: function(result) {
-    console.log(result.items[0].start.dateTime)
-
     for (var i = 0; i < result.items.length; i++) {
       var title = result.items[i].summary,
         location = result.items[i].location,
@@ -112,8 +110,6 @@ var getDayName = (function() {
       ],
       d = new Date(str)
     return daysNames[d.getDay()]
-    // console.log(daysNames[d.getDay()])
-    // console.log('str', str, d.getDay(), daysNames[d.getDay()])
   }
 })()
 getDayName(new Date())
@@ -155,8 +151,6 @@ var getTravelDateFormatted = (function() {
       minutes = d.getMinutes(),
       dayName = daysNames[d.getDay()]
 
-    console.log(day)
-    //return day + '-' + month + '-' + year + ' (' + dayName + ')';
     return hours > 12
       ? dayName +
           ' ' +
@@ -173,7 +167,6 @@ var getTravelDateFormatted = (function() {
 })()
 
 var formatedDate = getTravelDateFormatted(new Date())
-console.log(formatedDate)
 
 function convertDateForURLParam(date) {
   var yyyy = date.getFullYear().toString(),

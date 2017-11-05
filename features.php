@@ -5,7 +5,7 @@
     $special_events = 'https://www.googleapis.com/calendar/v3/calendars/meditationincolorado.org_l19o5o3uhcb4r7stv9affdjdg0%40group.calendar.google.com/events?key=AIzaSyDKwlYvY8MyAiFQUb7GMZWW1vMzYWIKlFo';    
 ?>
 
-<!-- GA -->
+<!-- Google Cal -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/google_cal.js" async></script>
 
 <section class="feature-section">
