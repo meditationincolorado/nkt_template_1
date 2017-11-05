@@ -40,16 +40,18 @@
 				?>
 
                 <section id="sticky-blurb" data-name="<?php echo $post->post_name; ?>">
-                    <a href="<?php echo get_permalink(); ?>">
 					<div id='background' <?php echo $bkgStyle ?>></div>
 					<div id="tint"></div>
 					<div id="close" <?php echo $fontStyle ?>>X</div>
 					<hgroup id="sticky-copy" <?php echo $fontStyle ?>>
-						<h3><?php echo $post->hero_slide_h1 ?></h3>
+						<h3>
+                            <a href="<?php echo get_permalink(); ?>">
+                                <?php echo $post->hero_slide_h1 ?>
+                            </a>
+                        </h3>
 						<p><?php echo $post->hero_slide_h2 ?></p>
 						<a class="sticky-cta" href="<?php echo get_permalink(); ?>"><?php echo $post->hero_slide_cta_text ?></a>
                     </hgroup>
-                    </a>    
 				</section>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
