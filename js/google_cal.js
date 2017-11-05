@@ -62,8 +62,9 @@ $.ajax({
         locationLink = setLocationLink(location)
 
       $('#calender-events').append(
-        '<li><a class="class-btn" href="/classes?day=' +
-          getDayName(start) +
+        '<li>' +
+          '<a class="class-btn" href="/classes?day='.concat(getDayName(start)) +
+          '&class='.concat(title) +
           '">'.concat(getDayName(start)).concat('</a> ') +
           '<div class="info"><span>'.concat(title).concat(' | ') +
           prettyTime(start, false).concat(' to ') +

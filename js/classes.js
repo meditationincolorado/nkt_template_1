@@ -10,16 +10,20 @@
     var body = $('body'),
       _window = $(window),
       $classes = $('article#Classes'),
-      day = getQueryVariable('day');
+      day = getQueryVariable('day')
+      meditation_class = getQueryVariable('class');
 
     if(day !== false) {
       $classes.find('.active').removeClass('active');
 
       var destination = $classes.offset().top - 100,
-        activeLink = $('a').filter(function(index) { return $(this).text() === day.concat("s"); });
+        activeDay = $('a').filter(function(index) { return $(this).text() === day.concat("s"); }),
+        activeClass = $('a').filter(function(index) { return $(this).text() === meditation_class.replace(/%20/g, " ") });
       
-      simulateClick(activeLink[0])
-      $('html,body').animate({ scrollTop: destination},500)}
+      if(activeDay[0] !== undefined) simulateClick(activeDay[0]);
+      if(activeDay[0] !== undefined)  simulateClick(activeClass[0]);
+      $('html,body').animate({ scrollTop: destination}, 500);
+    }
 
     function getQueryVariable(variable) {
           var query = window.location.search.substring(1);
