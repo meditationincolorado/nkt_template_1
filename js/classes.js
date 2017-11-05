@@ -21,7 +21,7 @@
         activeClass = 
           (meditation_class !== false) ? 
             $('a').filter(function(index) { 
-              return $(this).text() === meditation_class.replace(/%20/g, " ").replace(/%27/g, "'") 
+              return $(this).text() === meditation_class.replace(/%20/g, " ").replace(/%27/g, "’") 
             }) :
             null ;
       
