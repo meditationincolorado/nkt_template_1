@@ -57,8 +57,10 @@ $.ajax({
     for (var i = 0; i < result.items.length; i++) {
       var title = result.items[i].summary,
         location = result.items[i].location,
-        start = result.items[i].start.dateTime,
-        end = result.items[i].end.dateTime,
+        startDatetime = result.items[i].start.dateTime,
+        endDatetime = result.items[i].end.dateTime,
+        start = (startDatetime) ? startDatetime : result.items[i].start.date,
+        end = (endDatetime) ? endDatetime : result.items[i].end.date,
         locationLink = setLocationLink(location)
 
       $('#calender-events').append(
