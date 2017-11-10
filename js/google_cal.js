@@ -30,7 +30,7 @@ var now = new Date(),
   time = '01:00:0Z', //now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(),
   today = convertDateForURLParam(now) + 'T' + time
 
-week.setDate(week.getDate() + 5)
+week.setDate(week.getDate() + 3)
 var weekFromToday = convertDateForURLParam(week) + 'T' + time
 
 // API Implementation
@@ -88,6 +88,15 @@ var setLocationLink = function(location) {
   } else if (location.includes('Marion')) {
     tempLoc = 'Cap Hill'
     tempAnchor = 'Cap-Hill'
+  } else if (location.includes('Westminster')) {
+    tempLoc = 'Westminster'
+    tempAnchor = 'Westminster'
+  } else if (location.includes('Evergreen')) {
+    tempLoc = 'Evergreen'
+    tempAnchor = 'Evergreen'
+  } else if (location.includes('Colorado Springs')) {
+    tempLoc = 'Colorado Springs'
+    tempAnchor = 'Colorado Springs'
   } else {
     tempLoc = location
   }
