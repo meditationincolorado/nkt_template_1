@@ -84,6 +84,7 @@ var setLocationLink = function(location) {
     tempLoc = 'KMC Colorado'
   } else if (location.includes('Marion')) {
     tempLoc = 'Cap Hill'
+<<<<<<< HEAD
   } else if (location.includes('Colorado Springs')) {
     tempLoc = 'Colorado Springs Branch'
   } else if (location.includes('Evergreen')) {
@@ -94,6 +95,18 @@ var setLocationLink = function(location) {
     tempLoc = 'Westminster Branch'    
   } else if (location.includes('Aurora')) {
     tempLoc = 'Aurora Branch'    
+=======
+    tempAnchor = 'Cap-Hill'
+  } else if (location.includes('Westminster')) {
+    tempLoc = 'Westminster'
+    tempAnchor = 'Westminster'
+  } else if (location.includes('Evergreen')) {
+    tempLoc = 'Evergreen'
+    tempAnchor = 'Evergreen'
+  } else if (location.includes('Colorado Springs')) {
+    tempLoc = 'Colorado Springs'
+    tempAnchor = 'Colorado Springs'
+>>>>>>> fcdf73a13695a34f3c02db4be466a8cbb9f7da46
   } else {
     tempLoc = location
   }
