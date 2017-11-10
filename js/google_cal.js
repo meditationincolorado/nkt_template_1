@@ -57,8 +57,10 @@ $.ajax({
     for (var i = 0; i < result.items.length; i++) {
       var title = result.items[i].summary,
         location = result.items[i].location,
-        start = result.items[i].start.dateTime,
-        end = result.items[i].end.dateTime,
+        startDatetime = result.items[i].start.dateTime,
+        endDatetime = result.items[i].end.dateTime,
+        start = (startDatetime) ? startDatetime : result.items[i].start.date,
+        end = (endDatetime) ? endDatetime : result.items[i].end.date,
         locationLink = setLocationLink(location)
 
       $('#calender-events').append(
@@ -81,21 +83,10 @@ var setLocationLink = function(location) {
     tempAnchor = ''
 
   if (location.includes('Glenarm')) {
-    tempLoc = 'KMC Colorado'
+    tempLoc = 'Glenarm'
+    tempAnchor = 'Downtown'
   } else if (location.includes('Marion')) {
     tempLoc = 'Cap Hill'
-<<<<<<< HEAD
-  } else if (location.includes('Colorado Springs')) {
-    tempLoc = 'Colorado Springs Branch'
-  } else if (location.includes('Evergreen')) {
-    tempLoc = 'Evergreen Branch'
-  } else if (location.includes('Lakewood')) {
-    tempLoc = 'Lakewood Branch'
-  } else if (location.includes('Westminster')) {
-    tempLoc = 'Westminster Branch'    
-  } else if (location.includes('Aurora')) {
-    tempLoc = 'Aurora Branch'    
-=======
     tempAnchor = 'Cap-Hill'
   } else if (location.includes('Westminster')) {
     tempLoc = 'Westminster'
@@ -106,13 +97,12 @@ var setLocationLink = function(location) {
   } else if (location.includes('Colorado Springs')) {
     tempLoc = 'Colorado Springs'
     tempAnchor = 'Colorado Springs'
->>>>>>> fcdf73a13695a34f3c02db4be466a8cbb9f7da46
   } else {
     tempLoc = location
   }
 
   return (
-    '<a class="location" href="/classes#google-calendar' +
+    '<a class="location" href="/contact#' +
     tempAnchor +
     '">'.concat(tempLoc).concat('</a>')
   )
