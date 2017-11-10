@@ -27,7 +27,7 @@ function prettyTime(timeStr, meridian) {
 
 var now = new Date(),
   week = new Date(),
-  time = '01:00:0Z', //now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(),
+  time = '00:00:00-07:00', //now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(),
   today = convertDateForURLParam(now) + 'T' + time
 
 week.setDate(week.getDate() + 3)
