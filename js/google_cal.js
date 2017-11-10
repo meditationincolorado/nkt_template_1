@@ -30,7 +30,7 @@ var now = new Date(),
   time = '01:00:0Z', //now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(),
   today = convertDateForURLParam(now) + 'T' + time
 
-week.setDate(week.getDate() + 5)
+week.setDate(week.getDate() + 3)
 var weekFromToday = convertDateForURLParam(week) + 'T' + time
 
 // API Implementation
@@ -57,10 +57,8 @@ $.ajax({
     for (var i = 0; i < result.items.length; i++) {
       var title = result.items[i].summary,
         location = result.items[i].location,
-        startDatetime = result.items[i].start.dateTime,
-        endDatetime = result.items[i].end.dateTime,
-        start = (startDatetime) ? startDatetime : result.items[i].start.date,
-        end = (endDatetime) ? endDatetime : result.items[i].end.date,
+        start = result.items[i].start.dateTime,
+        end = result.items[i].end.dateTime,
         locationLink = setLocationLink(location)
 
       $('#calender-events').append(
@@ -83,17 +81,25 @@ var setLocationLink = function(location) {
     tempAnchor = ''
 
   if (location.includes('Glenarm')) {
-    tempLoc = 'Glenarm'
-    tempAnchor = 'Downtown'
+    tempLoc = 'KMC Colorado'
   } else if (location.includes('Marion')) {
     tempLoc = 'Cap Hill'
-    tempAnchor = 'Cap-Hill'
+  } else if (location.includes('Colorado Springs')) {
+    tempLoc = 'Colorado Springs Branch'
+  } else if (location.includes('Evergreen')) {
+    tempLoc = 'Evergreen Branch'
+  } else if (location.includes('Lakewood')) {
+    tempLoc = 'Lakewood Branch'
+  } else if (location.includes('Westminster')) {
+    tempLoc = 'Westminster Branch'    
+  } else if (location.includes('Aurora')) {
+    tempLoc = 'Aurora Branch'    
   } else {
     tempLoc = location
   }
 
   return (
-    '<a class="location" href="/contact#' +
+    '<a class="location" href="/classes#google-calendar' +
     tempAnchor +
     '">'.concat(tempLoc).concat('</a>')
   )

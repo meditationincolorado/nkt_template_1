@@ -64,13 +64,14 @@
 					<li><a href="/">Home</a></li>
 					<li><a href="/classes">Classes</a></li>
 					<li><a href="/about">About</a></li>
-					<li><a href="/buddhism">Kadampa Buddhism</a></li>
+					<li><a href="/kadampa-buddhism">Kadampa Buddhism</a></li>
 					<li><a href="/contact">Contact</a></li>
 					<li>&nbsp;</li>
 					<li class="heading">Helpful Links</li>
 					<li><a href="http://kadampa.org/" target="_blank">Kadampa Tradition</a></li>
 					<li><a href="http://www.tharpa.com/us/" target="_blank">Tharpa Publications</a></li>
-					<li><a href="http://emodernbuddhism.com/" target="_blank">Free EBook: Modern Buddhism</a></li>
+					<li><a href="http://emodernbuddhism.com/" target="_blank">Free eBook: Modern Buddhism</a></li>
+					<li><a href="http://howtotyl.com/" target="_blank">Free eBook: How to Transform Your Life</a></li>
 					<!-- <li>&nbsp;</li>
 					<li class="heading">Upcoming Events</li>
 					<li><a href="" target="_blank">Refuge Retreat</a></li> -->
@@ -152,5 +153,11 @@
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/slick/slick.min.js"></script>
 	<?php wp_footer(); ?>
+
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "df4cc0a25f11df2c254ed351a375a797"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+<!-- End Constant Contact Active Forms -->
+
 </body>
 </html>
