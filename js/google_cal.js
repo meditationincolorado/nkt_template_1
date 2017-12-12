@@ -97,6 +97,12 @@ var setLocationLink = function(location) {
   } else if (location.includes('Colorado Springs')) {
     tempLoc = 'Colorado Springs Branch'
     tempAnchor = 'Colorado Springs'
+  } else if (location.includes('Lakewood')) {
+    tempLoc = 'Lakewood Branch'
+    tempAnchor = 'Lakewood'
+  } else if (location.includes('Aurora')) {
+    tempLoc = 'Aurora Branch'
+    tempAnchor = 'Aurora'    
   } else {
     tempLoc = location
   }
