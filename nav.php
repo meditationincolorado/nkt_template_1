@@ -1,7 +1,7 @@
 <nav id="main-nav" class="row"> <!--banner-cta-->
 	<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 		<a href="<?php echo get_home_url(); ?>" id="logo">
-			<?php include('kmcco_svg.php'); ?>
+			<?php include('kmcco_full_svg.php'); ?>
 		</a>
 			<?php
 				$args1 = array( 

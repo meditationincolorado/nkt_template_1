@@ -4477,7 +4477,7 @@ span.no-wrap {
 	margin: 0;
 	top: 0;
 	/*left: 30px;*/
-	width: 125px;
+	width: 200px;
 }
 #main-nav a#logo svg .KMC {
 	fill: #ffffff;
@@ -5629,5 +5629,6 @@ div.grecaptcha-badge {
 p.ctct-form-footer {
 display:none;
 	}
+
 
 
