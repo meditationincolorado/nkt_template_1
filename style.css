@@ -4730,7 +4730,7 @@ span.highlight {
 #subpage-hero #mobile-nav { bottom: 25px;}
 #hero-section #mobile-nav a, #subpage-hero #mobile-nav a {
 	color: #ffffff;
-	font-weight: 500;
+	font-weight: bolder;
 	font-size: 1.4em;
 	margin: 0 5px !important;
 }
