@@ -4796,7 +4796,7 @@ span.highlight {
 	margin-right: 0;
 }
 #hero-section #mobile-nav a, #subpage-hero #mobile-nav a {
-	font-weight: 300;
+	font-weight: bolder;
 	opacity: 1;
 	color: #ffffff;
 }
