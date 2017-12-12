@@ -4477,7 +4477,7 @@ span.no-wrap {
 	margin: 0;
 	top: 0;
 	/*left: 30px;*/
-	width: 200px;
+	width: 125px;
 }
 #main-nav a#logo svg .KMC {
 	fill: #ffffff;
@@ -5633,6 +5633,26 @@ display:none;
 svg.full-logo {
 	fill:#ffffff;
 }
+
+#main-nav a#big-logo {
+	display: inline-block;
+	float: left;
+	position: relative;
+	margin: 0;
+	top: 0;
+	/*left: 30px;*/
+	width: 200px;
+}
+
+@media (max-width: 480px) {
+	#main-nav a#big-logo { display:none; !important; }
+}
+
+@media (min-width: 481px) {
+	#main-nav a#logo { display:none; !important; }
+}
+
+	
 
 
 
