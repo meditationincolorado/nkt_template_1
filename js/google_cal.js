@@ -83,19 +83,19 @@ var setLocationLink = function(location) {
     tempAnchor = ''
 
   if (location.includes('Glenarm')) {
-    tempLoc = 'Glenarm'
+    tempLoc = 'KMC Colorado'
     tempAnchor = 'Downtown'
   } else if (location.includes('Marion')) {
-    tempLoc = 'Cap Hill'
+    tempLoc = 'Cap Hill Branch'
     tempAnchor = 'Cap-Hill'
   } else if (location.includes('Westminster')) {
-    tempLoc = 'Westminster'
+    tempLoc = 'Westminster Branch'
     tempAnchor = 'Westminster'
   } else if (location.includes('Evergreen')) {
-    tempLoc = 'Evergreen'
+    tempLoc = 'Evergreen Branch'
     tempAnchor = 'Evergreen'
   } else if (location.includes('Colorado Springs')) {
-    tempLoc = 'Colorado Springs'
+    tempLoc = 'Colorado Springs Branch'
     tempAnchor = 'Colorado Springs'
   } else {
     tempLoc = location
