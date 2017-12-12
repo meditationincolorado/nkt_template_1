@@ -4643,7 +4643,7 @@ span.highlight {
 }
 #hero hgroup h3, #hero hgroup h2 { 
 	margin: 0 auto; 
-	font-weight: 100;
+	font-weight: normal;
 	font-size: .9em;
     animation-name: fadeInDelayed;
     animation-duration: 1.5s;
@@ -5652,6 +5652,16 @@ svg.full-logo {
 	#main-nav a#logo { display:none; !important; }
 }
 
+@media screen and (min-width:0\0) {
+	#hero-section #mobile-nav, #subpage-hero #mobile-nav {
+		position: absolute;
+		bottom: 8vh;
+		left: 0;
+		padding: 0 20px;
+		width: 100%;
+		text-align: center;
+	}
+}
 	
 
 
