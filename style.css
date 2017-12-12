@@ -5509,7 +5509,7 @@ span.mobile-hidden {
 		color: #ffffff;
 		padding-bottom: 10px;
 		text-transform: lowercase;
-		font-weight: bold;
+		font-weight: bolder;
 	}
 	#main-nav ul:first-child li:first-child { 
 		margin-left: 0;
