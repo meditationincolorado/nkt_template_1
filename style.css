@@ -4721,7 +4721,7 @@ span.highlight {
 }
 #hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
-	bottom: 11vh;
+	bottom: 8vh;
 	left: 0;
 	padding: 0 20px;
 	width: 100%;
@@ -5652,10 +5652,10 @@ svg.full-logo {
 	#main-nav a#logo { display:none; !important; }
 }
 
-@media screen and (min-width:0\0) {
+@media \\0 screen {
 	#hero-section #mobile-nav, #subpage-hero #mobile-nav {
 		position: absolute;
-		bottom: 8vh; !important;
+		bottom: 11vh; !important;
 		left: 0;
 		padding: 0 20px;
 		width: 100%;
