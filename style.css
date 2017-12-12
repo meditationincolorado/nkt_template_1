@@ -5662,6 +5662,15 @@ svg.full-logo {
 		text-align: center; }
 }
 	
+@media \0 all {
+	#hero-section #mobile-nav, #subpage-hero #mobile-nav {
+		position: absolute;
+		bottom: 11vh; !important;
+		left: 0;
+		padding: 0 20px;
+		width: 100%;
+		text-align: center; }
+}
 
 
 
