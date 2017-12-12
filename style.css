@@ -5644,11 +5644,11 @@ svg.full-logo {
 	width: 200px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 783px) {
 	#main-nav a#big-logo { display:none; !important; }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 784px) {
 	#main-nav a#logo { display:none; !important; }
 }
 
