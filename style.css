@@ -4901,6 +4901,7 @@ span.highlight {
 	height: initial;
 	line-height: 1;
 	text-transform: lowercase;
+	font-weight: bold;
 }
 .feature-section .vimeo_video iframe {
 	box-shadow: 0 0 10px rgba(0,0,0,.9);
@@ -5508,6 +5509,7 @@ span.mobile-hidden {
 		color: #ffffff;
 		padding-bottom: 10px;
 		text-transform: lowercase;
+		font-weight: bold;
 	}
 	#main-nav ul:first-child li:first-child { 
 		margin-left: 0;
@@ -5616,3 +5618,16 @@ span.mobile-hidden {
 #dwpb, .dwpb-close { 
     display: none;
 }
+
+
+/* Kyle Additional CSS */
+
+div.grecaptcha-badge {
+	display:none;
+	}
+
+p.ctct-form-footer {
+display:none;
+	}
+
+
