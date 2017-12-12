@@ -71,7 +71,7 @@
 					<li><a href="http://kadampa.org/" target="_blank">Kadampa Tradition</a></li>
 					<li><a href="http://www.tharpa.com/us/" target="_blank">Tharpa Publications</a></li>
 					<li><a href="http://emodernbuddhism.com/" target="_blank">Free eBook: Modern Buddhism</a></li>
-					<li><a href="http://duckies.com" target="_blank">Free eBook: How to Transform Your Life</a></li>
+					<li><a href="http://howtotyl.com" target="_blank">Free eBook: How to Transform Your Life</a></li>
 					<!-- <li>&nbsp;</li>
 					<li class="heading">Upcoming Events</li>
 					<li><a href="" target="_blank">Refuge Retreat</a></li> -->
