@@ -4566,7 +4566,7 @@ span.highlight {
 	text-align: center;
 	padding: 0;
 	color: white;
-	height: calc(104vh - 65px); /*100vh - 65px*/
+	height: calc(100vh - 65px); /*100vh - 65px*/
 
 	-webkit-transform-style: preserve-3d;
   	-moz-transform-style: preserve-3d;
@@ -4721,7 +4721,7 @@ span.highlight {
 }
 #hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
-	bottom: 6vh;
+	bottom: auto;
 	left: 0;
 	padding: 0 20px;
 	width: 100%;
