@@ -4733,6 +4733,7 @@ span.highlight {
 	font-weight: bolder;
 	font-size: 1.4em;
 	margin: 0 5px !important;
+	text-shadow: 1px 1px 5px black;
 }
 #hero-section #mobile-nav a:first-child, #subpage-hero #mobile-nav a:first-child {
 	margin-left: 0 !important;
