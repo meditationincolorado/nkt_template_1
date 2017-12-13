@@ -4721,7 +4721,7 @@ span.highlight {
 }
 #hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
-	bottom: 8vh;
+	bottom: 6vh;
 	left: 0;
 	padding: 0 20px;
 	width: 100%;
