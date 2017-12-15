@@ -5511,6 +5511,7 @@ span.mobile-hidden {
 		padding-bottom: 10px;
 		text-transform: lowercase;
 		font-weight: bolder;
+		text-shadow: 2px 1px 5px black;
 	}
 	#main-nav ul:first-child li:first-child { 
 		margin-left: 0;
