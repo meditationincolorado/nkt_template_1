@@ -7,7 +7,7 @@
 	<?php
 		$args = array( 
       'post_type' => 'post',
-      'posts_per_page' => 8,
+      'posts_per_page' => 9,
       'category_name' => $categoryName,
       'meta_key' => 'subpage_section_order',
       'orderby' => 'meta_value_num',
