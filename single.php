@@ -16,7 +16,7 @@ get_header(); ?>
 	$thumb_id = get_post_thumbnail_id();
  	$isDefined = is_int($thumb_id); 
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-	$thumb_url = $thumb_url_array[0];	
+    $thumb_url = $thumb_url_array[0];	
 ?>
 
 	<div id="subpage-hero" class="row cover center_vert_parent" style='background-image: url("<?php echo $thumb_url; ?>");'>

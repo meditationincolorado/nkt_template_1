@@ -37,7 +37,7 @@
 
         $socialMediaInfo = new WP_Query($args);
         while ($socialMediaInfo->have_posts()) : $socialMediaInfo->the_post(); ?>
-		
+
 		<meta name="description" content="<?php echo $post->default_og_description ?>">
       	<meta property="og:description" content="<?php echo $post->default_og_description ?>" />
 		<meta name="twitter:description" content="<?php echo $post->default_og_description ?>">
