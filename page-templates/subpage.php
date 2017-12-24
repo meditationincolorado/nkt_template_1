@@ -20,13 +20,6 @@ get_header(); ?>
 	$thumb_url = $thumb_url_array[0];	
 ?>
 
-    <script>
-        var ogImg = document.querySelectorAll('head > meta[property="og:image"]')[0],
-        twitterImg = document.querySelectorAll('head > meta[name="twitter:image"]')[0]
-
-        ogImg.setAttribute('content', <?php echo "'" . $thumb_url . "'" ?>)
-        twitterImg.setAttribute('content', <?php echo "'" . $thumb_url . "'" ?>)
-    </script>
 	<div id="subpage-hero" class="row cover center_vert_parent" style='background-image: url("<?php echo $thumb_url; ?>");'>
 		<div class="tint"></div>
 			<hgroup class="col-xs-12 col-xs-10 col-xs-offset-1 center_vert">
