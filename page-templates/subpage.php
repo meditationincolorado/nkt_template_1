@@ -42,6 +42,18 @@ get_header(); ?>
 		
 	<?php } ?>
 
+	<?php if ($post->post_name == 'cart') { ?>
+
+		<?php echo do_shortcode("[woocommerce_cart]"); ?>
+
+	<?php } ?>
+
+	<?php if ($post->post_name == 'checkout') { ?>
+
+		<?php echo do_shortcode("[woocommerce_checkout]"); ?>
+
+	<?php } ?>
+
 	<?php include(get_template_directory() . '/custom-content.php'); ?>
 	
 <?php endwhile; endif; ?>
