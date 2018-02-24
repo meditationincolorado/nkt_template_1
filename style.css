@@ -4721,7 +4721,7 @@ span.highlight {
 }
 #hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
-	bottom: 30px;
+	bottom: 100px;
 	left: 0;
 	padding: 0 20px;
 	width: 100%;
@@ -5511,7 +5511,7 @@ span.mobile-hidden {
 		padding-bottom: 10px;
 		text-transform: lowercase;
 		font-weight: bolder;
-		text-shadow: 2px 1px 5px black;
+		/*text-shadow: 2px 1px 5px black;*/
 	}
 	#main-nav ul:first-child li:first-child { 
 		margin-left: 0;
@@ -5643,7 +5643,7 @@ svg.full-logo {
 	margin: 0;
 	top: 0;
 	/*left: 30px;*/
-	width: 200px;
+	width: 150px;
 }
 
 @media (max-width: 783px) {
