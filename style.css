@@ -4566,7 +4566,7 @@ span.highlight {
 	text-align: center;
 	padding: 0;
 	color: white;
-	height: calc(110vh - 65px); /*100vh - 65px*/
+	height: calc(100vh - 65px); /*100vh - 65px*/
 
 	-webkit-transform-style: preserve-3d;
   	-moz-transform-style: preserve-3d;
@@ -4633,7 +4633,7 @@ span.highlight {
 }
 #hero hgroup, .hero hgroup {
   	position: relative;
-  	top: 40%;
+  	top: 50%;
   	transform: translateY(-50%);
   	padding: 0 10%;
 }
