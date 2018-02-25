@@ -4722,7 +4722,7 @@ span.highlight {
 #hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
 	bottom: 50px;
-	left: 0;
+	left: -12px;
 	padding: 0 20px;
 	width: 100%;
 	text-align: center;
