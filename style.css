@@ -4719,28 +4719,46 @@ span.highlight {
 	cursor: pointer;
 	opacity: .7;
 }
+
 #hero-section #mobile-nav, #subpage-hero #mobile-nav {
 	position: absolute;
 	bottom: 30px;
-	left: 0;
-	padding: 0 20px;
+	left: 0px;
+	padding-right: 20px;
+	padding-left: 3.5em;
 	width: 100%;
-	text-align: center;
 }
-#subpage-hero #mobile-nav { bottom: 25px;}
+#subpage-hero #mobile-nav { 
+	bottom: 25px;
+	padding-left: 3em;
+}
+
+#mobile-nav ul {
+	list-style: none;
+	margin: 0;
+	position: relative; 
+	display: inline-block;
+}
+
+#mobile-nav ul li {
+	float: left;
+	display: inline;
+	margin: 0 10px;
+}
+
 #hero-section #mobile-nav a, #subpage-hero #mobile-nav a {
 	color: #ffffff;
 	font-weight: bolder;
 	font-size: 1.4em;
 	margin: 0 5px !important;
 	text-shadow: 2px 1px 5px black;
+	text-align: center;
 }
-#hero-section #mobile-nav a:first-child, #subpage-hero #mobile-nav a:first-child {
-	margin-left: 0 !important;
+
+#subpage-hero #mobile-nav a {
+	padding-left: .7em;
 }
-#hero-section #mobile-nav a:last-child, #subpage-hero #mobile-nav a:last-child {
-	margin-right: 0 !important;
-}
+
 #hero-section .scroll-cta {
 	position: absolute;
 	bottom: -70px;
