@@ -19,6 +19,7 @@ get_header(); ?>
 <div id="hero-section">
 	<?php include('hero.php'); ?>
 	<?php include('mobile-nav.php'); ?>
+	<style>#mobile-nav ul {margin:0px 0px 10vh 0px;}</style>
 </div>
 <?php include('subnav.php'); ?>
 <?php include('features.php'); ?>

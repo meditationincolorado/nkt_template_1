@@ -4735,7 +4735,7 @@ span.highlight {
 
 #mobile-nav ul {
 	list-style: none;
-	margin: 0px 0px 15vh 0px; /*0px*/
+	margin: 0px; /*0px*/
 	position: relative; 
 	display: inline-block;
 }
