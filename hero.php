@@ -87,7 +87,7 @@
 
       	$('.hero_slider').slick({
 			autoplay: true,
-			autoplaySpeed: 7000,
+			autoplaySpeed: 3000,
 			dots: true,
 			infinite: true,
 			fade: fadeMe,
