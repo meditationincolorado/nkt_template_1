@@ -5617,7 +5617,7 @@ span.mobile-hidden {
 	.slick-slider .slick-track .slick-slide.lefty { background-position-x: center; }
 
 	#subpage-hero {
-		height: calc(70vh);
+		height: calc(60vh);
 	}
 }
 
