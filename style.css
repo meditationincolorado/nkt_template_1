@@ -5252,7 +5252,7 @@ span.mobile-hidden {
 
 /* subpages */
 #subpage-hero {
-	height: calc(40vh);
+	height: calc(45vh);
 }
 #subpage-hero .tint {
 	background-color: rgba(0,0,0,.45);
