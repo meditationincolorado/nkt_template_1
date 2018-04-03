@@ -5672,7 +5672,7 @@ svg.full-logo {
 	#main-nav a#logo { display:none; !important; }
 }
 
-@media (max-width: 530px) { [class*="col-"] {
+@media (max-width: 530px) { [class*="landingpagecol-"] {
 	display: contents;}
 	}
 	[class*="landingpagecol-"] {
