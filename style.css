@@ -5672,5 +5672,29 @@ svg.full-logo {
 	#main-nav a#logo { display:none; !important; }
 }
 
+@media (max-width: 530px) { [class*="col-"] {
+	display: contents;}
+	}
+	[class*="landingpagecol-"] {
+		float: left;
+		padding: 10px;
+	}
+	.landingpagecol-3 {
+		float: left;
+		width: 33%;
+		padding: 10px;
+		height: 350px;
+	}
+	.landingpagecol-2 {
+		float: left;
+		width: 50%;
+		padding: 10px;
+		height: 285px;
+	}
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 
 
