@@ -5675,10 +5675,10 @@ svg.full-logo {
 @media (max-width: 530px) { .landingpagecol-2, .landingpagecol-3 {
 	width: 100%;}
 	}
-@media (min-width: 531px) { .landingpagecol-2, {
+@media (min-width: 531px) { .landingpagecol-2 {
 	width: 50%;}
 	}
-@media (min-width: 531px) { .landingpagecol-3, {
+@media (min-width: 531px) { .landingpagecol-3 {
 	width: 33%;}
 	}
 	[class*="landingpagecol-"] {
