@@ -5673,7 +5673,7 @@ svg.full-logo {
 }
 
 @media (max-width: 530px) { [class*="landingpagecol-"] {
-	display: contents;}
+	width: 100%;}
 	}
 	[class*="landingpagecol-"] {
 		float: left;
