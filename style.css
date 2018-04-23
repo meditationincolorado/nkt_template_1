@@ -5271,7 +5271,7 @@ span.mobile-hidden {
 	color: #ffffff; 
 }
 #content {
-	padding: 140px 20px 0;
+	padding: 140px 10px 0px 10px;
 }
 #content.single-php {
     padding: 0px 10px 0px 10px;
