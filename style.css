@@ -5683,7 +5683,7 @@ svg.full-logo {
 	}
 	[class*="landingpagecol-"] {
 		float: left;
-		padding: 10px;
+		padding: 10px 0px 10px 0px;
 	}
 	.landingpagecol-2, .landingpagecol-3 {
 		float: left;
