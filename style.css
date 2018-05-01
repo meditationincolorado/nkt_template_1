@@ -5687,7 +5687,7 @@ svg.full-logo {
 	}
 	.landingpagecol-2, .landingpagecol-3 {
 		float: left;
-		padding: 10px;
+		padding: 10px 0px 10px 0px;
 		height: auto;
 	}
 	.row:after {
