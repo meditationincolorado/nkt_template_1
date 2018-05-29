@@ -5668,10 +5668,6 @@ svg.full-logo {
 	#main-nav a#big-logo { display:none; !important; }
 }
 
-@media (min-width: 784px) {
-	#main-nav a#logo { display:none; !important; }
-}
-
 @media (max-width: 530px) { .landingpagecol-2, .landingpagecol-3 {
 	width: 100%;}
 	}
