@@ -5513,7 +5513,7 @@ span.mobile-hidden {
 	#hero-section #mobile-nav, #subpage-hero #mobile-nav { display: none; }
 	#main-nav ul {
 		list-style: none;
-		margin: 0;
+		margin: 0px 15px 0px 0px;
 		/*text-align:center; */
 		position: relative; 
 		display: inline-block;
