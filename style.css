@@ -5498,7 +5498,7 @@ span.mobile-hidden {
 		top: 80px;
 	}
 	#main-nav a#logo {
-		top: 7px;
+		top: -20px;
 		left: 0;
 		margin: 0 20px 0 0;
 		float: initial;
