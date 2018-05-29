@@ -5654,16 +5654,6 @@ svg.full-logo {
 	fill:#ffffff;
 }
 
-#main-nav a#big-logo {
-	display: inline-block;
-	float: left;
-	position: relative;
-	margin: 0;
-	top: 0;
-	/*left: 30px;*/
-	width: 200px;
-}
-
 @media (max-width: 783px) {
 	#main-nav a#big-logo { display:none; !important; }
 }
