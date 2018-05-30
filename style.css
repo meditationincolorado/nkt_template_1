@@ -5667,19 +5667,23 @@ svg.full-logo {
 @media (min-width: 531px) { .landingpagecol-3 {
 	width: 33%;}
 	}
-	[class*="landingpagecol-"] {
-		float: left;
-		padding: 10px 0px 10px 0px;
+	
+.landingpagecol-3 {
+	float: left;
+	padding: 10px 0px 10px 0px;
+	height: auto;
 	}
-	.landingpagecol-2, .landingpagecol-3 {
-		float: left;
-		padding: 10px 0px 10px 0px;
-		height: auto;
-	}
-	.row:after {
-		content: "";
-		display: table;
-		clear: both;
+
+.landingpagecol-2 {
+	float: left;
+	padding: 10px 0px 30px 0px;
+	height: auto;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
 	}
 
 
