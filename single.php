@@ -42,7 +42,6 @@ get_header(); ?>
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 		<article id="<?php echo $anchorTag; ?>">
 	        		<a name="<?php echo $anchorTag; ?>"></a>
-		        	<h2><?php echo get_the_title(); ?></h2>
 					<?php the_content(); ?>
 
 			<!-- <?php
